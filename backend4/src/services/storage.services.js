@@ -1,9 +1,9 @@
 const ImageKit = require("imagekit") ;
 
 var imagekit = new ImageKit({
-    publicKey : "public_gM3BTMT2nztyzCp83a9QjgGEd1w=",
-    privateKey : "private_TbfS51HTQpZvBYvAzZsisEad+N8=",
-    urlEndpoint : "https://ik.imagekit.io/wz8yoywsv"
+    publicKey : process.env.PUBLIC_KEY,
+    privateKey : process.env.PRIVATE_KEY,
+    urlEndpoint : process.env.URL_ENDPOINT
 });
 
 async function uploadFile(file, fileName) {

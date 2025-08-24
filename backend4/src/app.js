@@ -4,6 +4,9 @@ const uploadFile = require('./services/storage.services')
 const postModel = require('./models/post.model')
 const cors = require("cors");
 const path = require('path')
+const dotenv = require('dotenv')
+
+dotenv.config()
 
 const upload = multer({ storage: multer.memoryStorage() })
 
