@@ -45,7 +45,7 @@ app.get('/posts', async (req, res) => {
     })
 })
 
-app.get('*', (req, res)=> {
+app.get('*name', (req, res)=> {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
 })
 
