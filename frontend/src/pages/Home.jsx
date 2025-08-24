@@ -21,7 +21,7 @@ console.log(file);
     console.log("form, ", form);
     
 
-     await axios.post('http://localhost:3000/posts', form).then((response)=>{
+     await axios.post('http://localhost:3000/api/posts', form).then((response)=>{
       console.log(response.data);
       
     }).catch((err)=> console.log(err)

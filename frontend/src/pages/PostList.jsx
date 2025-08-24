@@ -10,7 +10,7 @@ const PostList = () => {
 
   useEffect(() => {
    
-    axios.get('http://localhost:3000/posts').then((response)=> setPosts(response.data.post)
+    axios.get('http://localhost:3000/api/posts').then((response)=> setPosts(response.data.post)
     
     ).catch((err)=> console.log(err)
     )

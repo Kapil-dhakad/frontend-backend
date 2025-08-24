@@ -15,7 +15,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
-app.post('/posts', upload.single("mama"), async (req, res) => {
+app.post('/api/posts', upload.single("mama"), async (req, res) => {
     console.log(req.body)// isme caption aara he
     console.log(req.file);
 
@@ -36,7 +36,7 @@ app.post('/posts', upload.single("mama"), async (req, res) => {
 
 })
 
-app.get('/posts', async (req, res) => {
+app.get('/api/posts', async (req, res) => {
     const post = await postModel.find()
 
     res.json({
