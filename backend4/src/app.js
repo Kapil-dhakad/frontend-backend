@@ -13,7 +13,7 @@ const upload = multer({ storage: multer.memoryStorage() })
 const app = express();
 app.use(cors())
 app.use(express.json())
-app.use(express.static(path.join(__dirname, 'publc')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.post('/posts', upload.single("mama"), async (req, res) => {
     console.log(req.body)// isme caption aara he
