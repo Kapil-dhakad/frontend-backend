@@ -13,7 +13,7 @@ const upload = multer({ storage: multer.memoryStorage() })
 const app = express();
 app.use(cors())
 app.use(express.json())
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '..', 'public')))
 
 app.post('/posts', upload.single("mama"), async (req, res) => {
     console.log(req.body)// isme caption aara he
@@ -45,8 +45,8 @@ app.get('/posts', async (req, res) => {
     })
 })
 
-app.get('*name', (req, res)=> {
-    res.sendFile(path.join(__dirname, 'public/index.html'))
+app.get('*', (req, res)=> {
+    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
 })
 
 module.exports = app
