@@ -10,7 +10,7 @@ const PostList = () => {
 
   useEffect(() => {
    
-    axios.get('https://frontend-backend-7.onrender.com//posts').then((response)=> setPosts(response.data.post)
+    axios.get('https://frontend-backend-7.onrender.com/api/posts').then((response)=> setPosts(response.data.post)
     
     ).catch((err)=> console.log(err)
     )

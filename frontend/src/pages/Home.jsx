@@ -21,7 +21,7 @@ console.log(file);
     console.log("form, ", form);
     
 
-     await axios.post('https://frontend-backend-7.onrender.com', form).then((response)=>{
+     await axios.post('https://frontend-backend-7.onrender.com/api/posts', form).then((response)=>{
       console.log(response.data);
       
     }).catch((err)=> console.log(err)
